@@ -1,13 +1,6 @@
 {
   "filters": [
     {
-      "id": "language",
-      "type": "combo",
-      "label": "Language",
-      "default": "Any",
-      "options": ["Any", "English", "Spanish"]
-    },
-    {
       "id": "min_duration_sec",
       "type": "combo",
       "label": "Min Duration (sec)",
@@ -25,7 +18,6 @@
     { "key": "id", "title": "ID", "width": 80 },
     { "key": "agent", "title": "Agent", "width": 140 },
     { "key": "phone", "title": "Phone", "width": 160 },
-    { "key": "language", "title": "Language", "width": 110 },
     { "key": "timestamp", "title": "Timestamp", "width": 150 },
     { "key": "duration", "title": "Duration", "width": 110 },
     { "key": "transcript", "title": "Transcript Preview", "width": 420 }

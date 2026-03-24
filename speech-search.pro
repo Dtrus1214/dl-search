@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui multimedia concurrent
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,13 +17,34 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    searchengine.cpp \
+    waveformview.cpp
 
 HEADERS += \
-    mainwindow.h
+    diarizationengine.h \
+    mainwindow.h \
+    searchengine.h \
+    waveformview.h
 
 DISTFILES += \
     config/ui_config.json
+
+# Optional embedded whisper.cpp linkage.
+# Set WHISPER_CPP_DIR to your whisper.cpp build/install root that contains include/ and lib/.
+WHISPER_CPP_DIR = C:\whisper.cpp\release
+!isEmpty(WHISPER_CPP_DIR) {
+    message(Using embedded whisper.cpp from $$WHISPER_CPP_DIR)
+    INCLUDEPATH += $$WHISPER_CPP_DIR/include
+    win32 {
+        LIBS += -L$$WHISPER_CPP_DIR/lib -lwhisper
+    } else {
+        LIBS += -L$$WHISPER_CPP_DIR/lib -lwhisper
+    }
+    DEFINES += USE_WHISPER_EMBEDDED
+} else {
+    message(WHISPER_CPP_DIR not set; embedded whisper engine disabled)
+}
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

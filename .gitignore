@@ -1,0 +1,81 @@
+# Build outputs
+debug/
+release/
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.a
+*.lib
+*.lo
+*.la
+
+# Qt generated
+*.pro.user
+*.pro.user.*
+.qmake.stash
+Makefile*
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qm
+
+# Qt Creator
+*.autosave
+*.qmlc
+*.jsc
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.vcxproj.filters.user
+*.sln.docstates
+x64/
+x86/
+[Dd]ebug/
+[Rr]elease/
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlog/
+*.idb
+*.log
+*.tlog/
+*.lastbuildstate
+*.exp
+*.lib
+*.user
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# CMake (if used later)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
