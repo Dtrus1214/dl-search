@@ -250,6 +250,22 @@ void MainWindow::applyModernStyle()
         "QHeaderView::section { background: #1f2937; color: #d1d5db; border: none; padding: 8px; }"
         "QTableView::item:selected { background: #1e3a8a; color: #ffffff; }"
         "QListWidget::item:selected { background: #1e3a8a; color: #ffffff; }"
+        "QProgressBar {"
+        " background: #111827;"
+        " border: 1px solid #374151;"
+        " border-radius: 8px;"
+        " color: #e5e7eb;"
+        " text-align: center;"
+        " height: 20px;"
+        "}"
+        "QProgressBar::chunk {"
+        " background-color: #2563eb;"
+        " border-radius: 8px;"
+        "}"
+        "QProgressBar:disabled {"
+        " border: 1px solid #374151;"
+        " color: #9ca3af;"
+        "}"
     );
     qApp->setStyleSheet(style);
 }
